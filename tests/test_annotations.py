@@ -3,6 +3,7 @@
 import json
 import allure
 from allure_commons.types import Severity
+from allure import attachment_type
 
 
 @allure.tag("web")
@@ -11,7 +12,8 @@ from allure_commons.types import Severity
 @allure.feature("Поиск репозитория")
 @allure.story("Лямбда шаги через with allure.step")
 @allure.link("https://github.com", name="Test")
-def test_attachments(attachment_type=None):
+
+def test_attachments():
     # Текст
     allure.attach("Text content", name="Text", attachment_type=attachment_type.TEXT)
     # HTML
